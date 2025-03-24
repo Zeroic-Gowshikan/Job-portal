@@ -1,10 +1,11 @@
 import Logo from "../cybermind_works_logo.jpg";
 import React, { useState } from "react";
 import CreateJob from "./CreateJob"; // Import CreateJob component
+import CreateJobModal from "./CreateJobModal";
 
 const Navbar = ({ onJobAdded }) => {
-  const [showForm, setShowForm] = useState(false); // Controls the popup
-
+ // Controls the popup
+ const [showForm, setShowForm] = useState(false); 
   return (
     <>
       {/* Navbar Container */}
@@ -31,7 +32,8 @@ const Navbar = ({ onJobAdded }) => {
       </nav>
 
       {/* Job Creation Form Modal */}
-      {showForm && <CreateJob onClose={() => setShowForm(false)} onJobAdded={onJobAdded} />}
+      {/* {showForm && <CreateJob onClose={() => setShowForm(false)} onJobAdded={onJobAdded} />} */}
+      {showForm && <CreateJobModal  setShowForm={setShowForm} onJobAdded={onJobAdded}/>}
     </>
   );
 };

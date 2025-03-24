@@ -1,0 +1,8 @@
+.btn{
+  flex: 1;
+}
+.content{
+    /* background-color: red; */
+    height: 80%;
+    align-items: center;
+}
