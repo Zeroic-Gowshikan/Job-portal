@@ -24,7 +24,7 @@ const Navbar = ({ onJobAdded }) => {
         </div>
 
         {/* Right Side - Create Jobs Button */}
-        <img src={button} alt="Logo" className="w-[133px] h-[48px]"  onClick={() => setShowForm(true)}/>
+        <img src={button} alt="Logo" className="w-[133px] h-[48px] ml-[40px]"  onClick={() => setShowForm(true)}/>
       </nav>
 
       {/* Job Creation Form Modal */}

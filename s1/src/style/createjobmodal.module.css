@@ -1,30 +1,32 @@
 .overlay{
+    
     background-color: rgb(0,0,0,.5);
-    position: absolute;
+    position: fixed;
     z-index: 1;
     display: flex;
     justify-content: center;
     top: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    flex: 1;
 }
 .container{
     position: absolute;
     display: flex;
     flex-direction: column;
     z-index: 5;
-    top:10rem;
+    top:3rem;
     max-height: max-content;
     background-color: #fff;
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px;
 }
 .container h1{
     font-size: 2rem;
     color: #222222;
     font-weight: 500;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 .inputcontainer{
 
@@ -43,7 +45,7 @@
     height: 3.5rem;
     border-radius: 10px;
     padding:.2rem .5rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .inputcontainer select{
     border-color: #BCBCBC;
@@ -83,7 +85,7 @@
     width:14rem;
     height: 3.5rem;
     border-radius: 10px;
-    margin-top:2rem;
+    margin-top:1rem;
 }
 .savebtn{
     border-color: #222222;

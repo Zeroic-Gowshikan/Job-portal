@@ -8,7 +8,7 @@ import downicon from '../assets/downicon.png';
 import classes from '../style/inputfield.module.css';
 
 const InputFields = ({ jobs, onFilter }) => {
-  const [salaryRange, setSalaryRange] = useState([500000, 1200000]);
+  const [salaryRange, setSalaryRange] = useState([50000, 1200000]);
   const [searchQuery, setSearchQuery] = useState("");
   const [location, setLocation] = useState("");
   const [jobType, setJobType] = useState("");
@@ -118,8 +118,8 @@ const InputFields = ({ jobs, onFilter }) => {
       </div>
 
       {/* Salary Range Slider */}
-      <div className="flex items-center space-x-2 ml-4">
-        <span className="text-gray-500">Salary Per Month</span>
+      <div className="flex items-center space-x-2 ml-4 flex-col">
+        <span className="text-gray-500 mb-4">Salary Per Month ₹{(salaryRange[0] / 1000).toFixed(0)}k - ₹{(salaryRange[1] / 1000).toFixed(0)}k</span>
         <input
   type="range"
   min="500000"
@@ -141,9 +141,7 @@ const InputFields = ({ jobs, onFilter }) => {
 />
 
 
-        <span className="text-gray-500">
-          ₹{(salaryRange[0] / 1000).toFixed(0)}k - ₹{(salaryRange[1] / 1000).toFixed(0)}k
-        </span>
+      
       </div>
     </div>
   );

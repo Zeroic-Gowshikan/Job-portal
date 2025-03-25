@@ -22,7 +22,7 @@ const JobList = ({jobs}) => {
           date={job.date}
         />
       ))}
-      {jobs.length===0&&<h1>No Match</h1>}
+      {jobs.length===0&&<h1 className="flex justify-between w-full text-gray-500 mt-2 text-center">No Match</h1>}
       
     </div>
   );
