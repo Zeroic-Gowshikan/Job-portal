@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaSearch, FaMapMarkerAlt, FaBriefcase } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import searchicon from '../assets/searchicon.png';
-import locationicon from '../assets/location.png';
+import locationicon from '../assets/Location.png';
 import jobtypeicon from '../assets/jobtypeicon.png';
 import downicon from '../assets/downicon.png';
 import classes from '../style/inputfield.module.css';
