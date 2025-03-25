@@ -1,5 +1,8 @@
 import React from "react";
-import classes from '../style/jobCard.module.css'
+import classes from '../style/jobCard.module.css';
+import xplogo from '../assets/explogo.png';
+import loc from '../assets/loclogo.png';
+import lpalogo from '../assets/lpalogo.png'
 const JobCard = ({ logo, title, company, mode, salary, description,date}) => {
 
   // Function to calculate how much time has passed since a given date
@@ -49,9 +52,9 @@ const getTimePassed = (postDate) => {
 
       {/* Job Info */}
       <div className="flex items-center text-gray-500 text-base space-x-3 mt-1">
-        <span>🏢 {company}</span>
-        <span>📍 {mode}</span>
-        <span>💰 {salary}</span>
+        <span className="flex flex-row  justify-center items-center">  <img src={xplogo} alt="search" className="h-[16px] mr-1" /> {company}</span>
+        <span className="flex flex-row  justify-center items-center">  <img src={loc} alt="search" className="h-[16px] mr-1" /> {mode}</span>
+        <span className="flex flex-row  justify-center items-center">  <img src={lpalogo} alt="search" className="h-[16px] mr-1" /> {salary}</span>
       </div>
 
       {/* Job Description */}
