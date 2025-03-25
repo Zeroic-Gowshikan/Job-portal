@@ -1,4 +1,5 @@
 import Logo from "../cybermind_works_logo.jpg";
+import button from '../assets/button.png';
 import React, { useState } from "react";
 import CreateJob from "./CreateJob"; // Import CreateJob component
 import CreateJobModal from "./CreateJobModal";
@@ -9,11 +10,11 @@ const Navbar = ({ onJobAdded }) => {
   return (
     <>
       {/* Navbar Container */}
-      <nav className="flex items-center justify-between bg-white shadow-md rounded-full px-5 py-3 max-w-3xl mx-auto mt-3">
+      <nav className="flex items-center justify-between bg-white shadow-sm rounded-full px-5 py-3 max-w-5xl h-[80px] mx-auto mt-3 mb-3">
         {/* Left Side - Logo and Navigation Links */}
-        <div className="flex items-center space-x-9">
-          <img src={Logo} alt="Logo" className="w-10 h-10" />
-          <ul className="flex space-x-5 text-gray-700 font-medium">
+        <div className="flex items-center space-x-20 ">
+          <img src={Logo} alt="Logo" className="w-[44px] h-[44px]" />
+          <ul className="flex space-x-20 text-gray-700 font-medium" >
             <li className="cursor-pointer hover:text-blue-500">Home</li>
             <li className="cursor-pointer hover:text-blue-500">Find Jobs</li>
             <li className="cursor-pointer hover:text-blue-500">Find Talents</li>
@@ -23,12 +24,7 @@ const Navbar = ({ onJobAdded }) => {
         </div>
 
         {/* Right Side - Create Jobs Button */}
-        <button
-          onClick={() => setShowForm(true)}
-          className="bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full px-5 py-2"
-        >
-          Create Jobs
-        </button>
+        <img src={button} alt="Logo" className="w-[133px] h-[48px]"  onClick={() => setShowForm(true)}/>
       </nav>
 
       {/* Job Creation Form Modal */}

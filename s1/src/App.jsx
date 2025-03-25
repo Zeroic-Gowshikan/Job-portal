@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./Components/Navbar";
 import JobList from "./Components/JobList";
 import InputFields from "./Components/InputFields"
-
+import classes from './style/App.module.css';
 const App = () => {
   const getRandomDate = () => {
     const start = new Date(2023, 0, 1).getTime(); // Start date: January 1, 2023
@@ -111,7 +111,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className={classes.layout}>
       <Navbar onJobAdded={addNewJob}/>
       <InputFields jobs={jobs} onFilter={handleFilter}/>
       <JobList jobs={filteredJobs} />
